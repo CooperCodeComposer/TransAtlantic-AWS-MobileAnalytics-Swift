@@ -24,13 +24,14 @@ class CVDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelega
     
     var people: [Person]
     
+    // MARK: Initializer
+    
     init(collectionView: UICollectionView) {
         self.collectionView = collectionView
         people = [hLaurie, tHiddleston, bCranston, hMirren]
     }
     
     // MARK: UICollectionViewDataSource
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return people.count
@@ -42,11 +43,10 @@ class CVDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelega
         
         let person = people[indexPath.row]
                 
-        cell.nameLabel.text = person.name.lowercased()
+        cell.nameLabel.text = person.name
         cell.personImageView.image = person.image
         
         cell.personImageView.layer.borderWidth = 2
-        cell.personImageView.layer.masksToBounds = false
         cell.personImageView.layer.borderColor = UIColor.red.cgColor // new in Swift 3
         cell.personImageView.layer.cornerRadius = cell.personImageView.frame.height / 2
         cell.personImageView.clipsToBounds = true

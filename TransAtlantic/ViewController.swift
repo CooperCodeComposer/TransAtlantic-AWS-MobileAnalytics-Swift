@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     func displayScore() {
         
-        let ac = UIAlertController(title: "SCORE", message: "Your score is \(score)", preferredStyle: .alert)
+        let ac = UIAlertController(title: "SCORE", message: "You Answered \(score) Correctly!", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         present(ac, animated: true, completion: nil)
