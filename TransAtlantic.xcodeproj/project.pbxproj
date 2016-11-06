@@ -12,6 +12,9 @@
 		EDC506C61DCE75EC00A7A036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC506C41DCE75EC00A7A036 /* Main.storyboard */; };
 		EDC506C81DCE75EC00A7A036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC506C71DCE75EC00A7A036 /* Assets.xcassets */; };
 		EDC506CB1DCE75EC00A7A036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC506C91DCE75EC00A7A036 /* LaunchScreen.storyboard */; };
+		EDC506D31DCE786C00A7A036 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC506D21DCE786C00A7A036 /* PersonCollectionViewCell.swift */; };
+		EDC506D51DCE7C4500A7A036 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC506D41DCE7C4500A7A036 /* DataModel.swift */; };
+		EDC506D71DCE7DA300A7A036 /* CVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC506D61DCE7DA300A7A036 /* CVDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		EDC506C71DCE75EC00A7A036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDC506CA1DCE75EC00A7A036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDC506CC1DCE75EC00A7A036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDC506D21DCE786C00A7A036 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
+		EDC506D41DCE7C4500A7A036 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		EDC506D61DCE7DA300A7A036 /* CVDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			children = (
 				EDC506C01DCE75EC00A7A036 /* AppDelegate.swift */,
 				EDC506C21DCE75EC00A7A036 /* ViewController.swift */,
+				EDC506D21DCE786C00A7A036 /* PersonCollectionViewCell.swift */,
+				EDC506D41DCE7C4500A7A036 /* DataModel.swift */,
+				EDC506D61DCE7DA300A7A036 /* CVDataSource.swift */,
 				EDC506C41DCE75EC00A7A036 /* Main.storyboard */,
 				EDC506C71DCE75EC00A7A036 /* Assets.xcassets */,
 				EDC506C91DCE75EC00A7A036 /* LaunchScreen.storyboard */,
@@ -138,6 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC506C31DCE75EC00A7A036 /* ViewController.swift in Sources */,
+				EDC506D51DCE7C4500A7A036 /* DataModel.swift in Sources */,
+				EDC506D31DCE786C00A7A036 /* PersonCollectionViewCell.swift in Sources */,
+				EDC506D71DCE7DA300A7A036 /* CVDataSource.swift in Sources */,
 				EDC506C11DCE75EC00A7A036 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +273,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 829TEWXQ4Y;
 				INFOPLIST_FILE = TransAtlantic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alistaircooper.TransAtlantic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,6 +287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 829TEWXQ4Y;
 				INFOPLIST_FILE = TransAtlantic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alistaircooper.TransAtlantic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
