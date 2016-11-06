@@ -1,0 +1,6 @@
+framework module Pods_TransAtlantic {
+  umbrella header "Pods-TransAtlantic-umbrella.h"
+
+  export *
+  module * { export * }
+}
