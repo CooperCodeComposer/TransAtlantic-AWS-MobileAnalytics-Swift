@@ -12,7 +12,7 @@ Touch the person to guess if they're British or American
 + UICollectionView with custom prototype cells
 + circular image views with boarders
 
-![Alt text](/TransAtlanticSS.png?raw=true "")
+![Alt text](/TransAtlanticSS2.png?raw=true "")
 
 # Author
 Alistair Cooper
