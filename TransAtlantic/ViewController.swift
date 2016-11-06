@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AWSMobileAnalytics
 
 class ViewController: UIViewController {
 
@@ -52,11 +53,31 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func logAMA() {
+        
+        let eventClient = AWSMobileAnalytics(forAppId: "YOUR_ID").eventClient
+        
+        guard let client = eventClient else {
+            print("Error creating AMA event client")
+            return
+        }
+        
+        guard let event = client.createEvent(withEventType: "Achievement") else {
+            print("Error creating AMA event")
+            return
+        }
+        
+        event.addAttribute("Completed", forKey: "Level1")
+        event.addMetric(score as NSNumber, forKey: "Level1Score")
+        client.record(event)
+    }
 
     @IBAction func submit(_ sender: UIButton) {
         
         checkAnswers()
         displayScore()
+        logAMA()
     }
 }
 
