@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F565FFF872B262BAFF6219E /* Pods_TransAtlantic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E389BCCA982AD4F8DAC9799 /* Pods_TransAtlantic.framework */; };
 		EDC506C11DCE75EC00A7A036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC506C01DCE75EC00A7A036 /* AppDelegate.swift */; };
 		EDC506C31DCE75EC00A7A036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC506C21DCE75EC00A7A036 /* ViewController.swift */; };
 		EDC506C61DCE75EC00A7A036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC506C41DCE75EC00A7A036 /* Main.storyboard */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E389BCCA982AD4F8DAC9799 /* Pods_TransAtlantic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransAtlantic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		907FA593422BAEE2B2DE99A9 /* Pods-TransAtlantic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransAtlantic.release.xcconfig"; path = "Pods/Target Support Files/Pods-TransAtlantic/Pods-TransAtlantic.release.xcconfig"; sourceTree = "<group>"; };
+		D51942CA226DF710AFFA4535 /* Pods-TransAtlantic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransAtlantic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TransAtlantic/Pods-TransAtlantic.debug.xcconfig"; sourceTree = "<group>"; };
 		EDC506BD1DCE75EB00A7A036 /* TransAtlantic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransAtlantic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC506C01DCE75EC00A7A036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDC506C21DCE75EC00A7A036 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F565FFF872B262BAFF6219E /* Pods_TransAtlantic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86C2CA273E937D110E0F98CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E389BCCA982AD4F8DAC9799 /* Pods_TransAtlantic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EDC506B41DCE75EB00A7A036 = {
 			isa = PBXGroup;
 			children = (
 				EDC506BF1DCE75EB00A7A036 /* TransAtlantic */,
 				EDC506BE1DCE75EB00A7A036 /* Products */,
+				FC200BBF0AC52BC14843C50C /* Pods */,
+				86C2CA273E937D110E0F98CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +88,15 @@
 			path = TransAtlantic;
 			sourceTree = "<group>";
 		};
+		FC200BBF0AC52BC14843C50C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D51942CA226DF710AFFA4535 /* Pods-TransAtlantic.debug.xcconfig */,
+				907FA593422BAEE2B2DE99A9 /* Pods-TransAtlantic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDC506CF1DCE75EC00A7A036 /* Build configuration list for PBXNativeTarget "TransAtlantic" */;
 			buildPhases = (
+				629A880CBFBCA14B65AADC7A /* [CP] Check Pods Manifest.lock */,
 				EDC506B91DCE75EB00A7A036 /* Sources */,
 				EDC506BA1DCE75EB00A7A036 /* Frameworks */,
 				EDC506BB1DCE75EB00A7A036 /* Resources */,
+				E6FF73FB22ECEEB2B4DF7F71 /* [CP] Embed Pods Frameworks */,
+				9E913FF223A1138E54AA5842 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		629A880CBFBCA14B65AADC7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E913FF223A1138E54AA5842 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransAtlantic/Pods-TransAtlantic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6FF73FB22ECEEB2B4DF7F71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransAtlantic/Pods-TransAtlantic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDC506B91DCE75EB00A7A036 /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		EDC506D01DCE75EC00A7A036 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D51942CA226DF710AFFA4535 /* Pods-TransAtlantic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 829TEWXQ4Y;
@@ -283,6 +359,7 @@
 		};
 		EDC506D11DCE75EC00A7A036 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 907FA593422BAEE2B2DE99A9 /* Pods-TransAtlantic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 829TEWXQ4Y;
@@ -314,6 +391,7 @@
 				EDC506D11DCE75EC00A7A036 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
