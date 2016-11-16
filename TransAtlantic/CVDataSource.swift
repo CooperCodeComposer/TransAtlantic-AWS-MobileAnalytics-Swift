@@ -11,9 +11,7 @@ import UIKit
 class CVDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
     
     private let collectionView: UICollectionView
-    
-    static var score: Int = 0
-    
+        
     var hLaurie = Person(name: "Hugh Laurie", image: UIImage(named: "HLaurie")!, isAmerican: false)
     
     var tHiddleston = Person(name: "Tom Hiddleston", image: UIImage(named: "THiddleston")!, isAmerican: false)
